@@ -4,15 +4,19 @@ import movieRouter from './movie'
 import cineamRouter from './cineam'
 import mineRouter from './mine'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
 
-export default new Router ({
+export default new VueRouter({
   mode:'history',
   base:process.env.BASE_URL,
   routes:[
     movieRouter,
     cineamRouter,
-    mineRouter
+    mineRouter,
+    {
+      path : '/*',
+      redirect : '/movie'
+    }
   ]
 })
