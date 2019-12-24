@@ -62,7 +62,7 @@ export default {
 <style scoped>
     #content .movie_body{
         flex: 1;
-        overflow: hidden;
+        overflow: auto;
     }
     .movie_body ul{
         margin: 0 12px;
@@ -79,15 +79,16 @@ export default {
         width: 64px;
         height: 90px;
     }
-    .movie_body .pic_show img{
-        width: 100%;
+    .movie_body  img{
+       width: 64px;
+       height: 90px;
     }
-    .movie_body .info-list{
+    .movie_body .info_list{
         margin-left: 10px;
         flex: 1;
         position: relative;
     }
-    .movie_body .info-list h2{
+    .movie_body .info_list h2{
         font-size: 17px;
         line-height: 24px;
         width: 150px;
@@ -95,7 +96,7 @@ export default {
         white-space: nowrap;
         text-overflow: ellipsis
     }
-    .movie_body .info-list p{
+    .movie_body .info_list p{
         font-size: 13px;
         color: #666;
         line-height: 22px;
@@ -104,16 +105,16 @@ export default {
         white-space: nowrap;
         text-overflow: ellipsis
     }
-    .movie_body .info-list .grade{
+    .movie_body .info_list .grade{
         font-weight: 700;
         color: #faaf00;
         font-size: 15px;
     }
-    .movie_body .info-list img{
+    .movie_body .info_list img{
         width: 50px;
         position: absolute;
         right: 10px;
-        top : 15px;
+        top : 5px;
     }
     .movie_body .btn_mall,.movie_body .btn_pre{
         width: 47px;
@@ -125,5 +126,8 @@ export default {
         border-radius: 4px;
         font-size: 12px;
         cursor: pointer;
+    }
+    .movie_body .btn_pre{
+        background-color: #3c9fe6;
     }
 </style>

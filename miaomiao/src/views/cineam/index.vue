@@ -1,6 +1,6 @@
 <template>
    <div id="main">
-        <Header title="喵喵影院"/>
+        <Header title="天猫影院"/>
         <TabBar />
     </div>
 </template>

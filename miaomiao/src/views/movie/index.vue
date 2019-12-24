@@ -1,18 +1,18 @@
 <template>
     <div id="main">
-        <Header title="喵喵电影"/>
+        <Header title="天猫电影"/>
         <div id="content">
             <div class="movie_menu">
-                <div class="city_name">
+                <router-link tag="div" to="/movie/city" class="city_name">
                     <span>北京</span>
-                </div>
+                </router-link>
                 <div class="hot_swtich">
-                    <div class="hot_item active">正在热映</div>
-                    <div class="hot_item">即将上映</div>
+                    <router-link tag="div" to="/movie/NowPlaying" class="hot_item">正在热映</router-link>
+                    <router-link tag="div" to="/movie/ComingPlay" class="hot_item">即将上映</router-link>
                 </div>
-                <div class="search_entry">
+                <router-link tag="div" to="/movie/search" class="search_entry">
                     <i class="iconfont icon-sousuo"></i>
-                </div>
+                </router-link>
             </div>
             <keep-alive>
                 <router-view />
@@ -51,7 +51,11 @@ export default {
     }
     .movie_menu .city_name.active{
         color: #ef4238;
-        border: 2px solid #ef4238
+        border-bottom: 2px solid #ef4238
+    }
+    .movie_menu .city_name.router-link-active{
+        color: #ef4238;
+        border-bottom: 2px solid #ef4238
     }
     .movie_menu .hot_swtich{
         display: flex;
@@ -68,7 +72,11 @@ export default {
     }
     .movie_menu .hot_item.active{
         color: #ef4238;
-        border: 2px solid #ef4238
+        border-bottom: 2px solid #ef4238
+    }
+    .movie_menu .hot_item.router-link-active{
+        color: #ef4238;
+        border-bottom: 2px solid #ef4238
     }
     .movie_menu .search_entry{
         margin-right: 20px;
@@ -77,7 +85,11 @@ export default {
     }
     .movie_menu .search_entry.active{
          color: #ef4238;
-        border: 2px solid #ef4238
+        border-bottom: 2px solid #ef4238
+    }
+    .movie_menu .search_entry.router-link-active{
+         color: #ef4238;
+        border-bottom: 2px solid #ef4238
     }
     .movie_menu .search_entry i{
         font-size: 24px;
